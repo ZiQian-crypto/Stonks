@@ -1,9 +1,14 @@
 import React from 'react';
 import Login from './Components/Login';
+import Dashboard from './Components/Dashboard';
+import UserProvider from './Providers/UserProvider';
 
 function App(){
     return (
-        <Login />
+        <UserProvider>  
+            <Login />
+            <Dashboard />            
+        </UserProvider>
     );
 }
 
