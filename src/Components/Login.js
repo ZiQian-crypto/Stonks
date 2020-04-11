@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import '../Styles/Login.css';
+import { signInWithGoogle } from '../Firebase';
 
 function Login(){
     
     const handleLogin = () => {
-        alert("Feature not implemented yet!")
+        signInWithGoogle();
     }
     return (
         <div className="login-wrapper">
