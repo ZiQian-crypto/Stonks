@@ -14,10 +14,10 @@ function App(){
         <UserProvider>  
             <Router>
             <Switch>
-                <Route exact path="/">
+                <Route exact path="/login">
                     <Login />
                 </Route>
-                <Route exact path="/dashboard">
+                <Route exact path="/">
                     <Dashboard />
                 </Route>
             </Switch>

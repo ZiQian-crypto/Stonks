@@ -8,7 +8,9 @@ function Dashboard(){
 
     return(
         <div className='dash-background'>
-           <span>Stuff</span> 
+            <div>
+                
+            </div>
         </div>
     )
 }
