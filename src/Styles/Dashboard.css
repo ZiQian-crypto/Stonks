@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap:900');
+
 .dash-background{
-    flex: 1;
     background-color: black;
+<<<<<<< HEAD
     height: 100vh
 }
 
@@ -9,4 +11,27 @@
     padding: 10px;
     vertical-align: center;
     color: white;
+=======
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.card-holder{
+    background-color: white;
+    width: 30vw;
+    height: 90vh;
+    position: absolute;
+    bottom: 0;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-holder-title{
+    font-family: square721bt;
+    font-size: 3em;
+    font-weight: 900;
+    color: gray;
+>>>>>>> c9ff6dc3b65114b04e8fd337d39d2bb3a505e5d5
 }

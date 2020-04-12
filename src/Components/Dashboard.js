@@ -9,8 +9,13 @@ function Dashboard(){
 
     return(
         <div className='dash-background'>
+<<<<<<< HEAD
             <div className='dash-map'>
                 <MapView />
+=======
+            <div className="card-holder">
+                <h1 className="card-holder-title">STONKS</h1>
+>>>>>>> c9ff6dc3b65114b04e8fd337d39d2bb3a505e5d5
             </div>
         </div>
     )
