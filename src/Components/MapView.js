@@ -9,12 +9,6 @@ import '../Styles/MapView.css';
 import LocateControl from './LocateControl';
 
 export default class MapView extends Component {
-<<<<<<< HEAD
-    state = {
-        lat: 1.29,
-        lng: 103.81,
-        zoom: 13,
-=======
     
     constructor(props){
         super(props);
@@ -35,7 +29,6 @@ export default class MapView extends Component {
                 this.setState({lat: latit, lng: longit});
             });
         }
->>>>>>> e0a869d3eeec8b91fe74bd7fd59fda3210c9c136
     }
 
     render() {
@@ -46,13 +39,9 @@ export default class MapView extends Component {
             strings: {
                 title: 'Enable Location',
             },
-<<<<<<< HEAD
-            onActivate: () => {}
-=======
             onActivate: () => {
                 this.getLocation();
             }
->>>>>>> e0a869d3eeec8b91fe74bd7fd59fda3210c9c136
         }
         const position = [this.state.lat, this.state.lng]
         console.log(this.state.lat);

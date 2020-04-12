@@ -3,15 +3,17 @@ import Geocode from 'react-geocode';
 import '../Styles/Carousel.css';
 
 function reverseGeocode(lat, lng) {
+
     Geocode.setApiKey("AIzaSyDVtxfNIxil5oppS_s3SlMP1Kn0mBnKuAE");
     Geocode.fromLatLng(lat, lng).then( response => {
-        const address = response.results[0].formatted_address;
+        let address = response.results[0].formatted_address;
         console.log(address);
         return address;
     }, error => {
         console.log(error)
     });
-    return "hello";
+
+    return "Hello";
 }
 
 export default class Carousel extends Component {
@@ -31,7 +33,7 @@ export default class Carousel extends Component {
                                     {(supplier.currentProduct === null)? '' : supplier.currentProduct}
                                 </div>
                                 <div className="store-response">
-                                    { reverseGeocode(supplier.address[0], supplier.address[1]) }
+                                    { supplier.location }
                                 </div>
                                 <div className="store-distance"></div>
                             </div>
