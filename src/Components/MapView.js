@@ -5,6 +5,7 @@ import {
     Marker,
     Popup,
 } from 'react-leaflet';
+import '../Styles/MapView.css';
 
 export default class MapView extends Component {
     state = {
@@ -16,7 +17,11 @@ export default class MapView extends Component {
     render() {
         const position = [this.state.lat, this.state.lng]
         return(
+<<<<<<< HEAD
             <Map center={position} zoom={this.state.zoom} style={{ "width": "100 vw", "height": "100 vw", }}>
+=======
+            <Map center={position} zoom={this.state.zoom} className="map">
+>>>>>>> 531f51fcffbfed72528282c349da625680a9309a
                 <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
