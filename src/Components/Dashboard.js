@@ -1,8 +1,23 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../Providers/UserProvider';
+import { firestore } from '../Firebase';
 import MapView from './MapView';
 import Carousel from './Carousel';
 import '../Styles/Dashboard.css';
+
+async function getData() {
+    const data = await firestore.collection('events')
+    data.get().then((querySnapshot) => {
+        const tempDoc = []
+        querySnapshot.forEach((doc) => {
+            tempDoc.push({
+                id: doc.id,
+                ...doc.data()
+            })
+        })
+        console.log(tempDoc)
+    })
+}
 
 function Dashboard(){
 
