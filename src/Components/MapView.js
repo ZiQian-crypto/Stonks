@@ -16,7 +16,7 @@ export default class MapView extends Component {
     render() {
         const position = [this.state.lat, this.state.lng]
         return(
-            <Map center={position} zoom={this.state.zoom} style={{ width: 100 px, height: 100 px, }}>
+            <Map center={position} zoom={this.state.zoom} style={{ "width": "100 vw", "height": "100 vw", }}>
                 <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
