@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap:900');
+
 .dash-background{
-    flex: 1;
     background-color: black;
-    height: 100vh
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.card-holder{
+    background-color: white;
+    width: 30vw;
+    height: 90vh;
+    position: absolute;
+    bottom: 0;
+    border-radius: 30px;
+    display: flex;
+}
+
+.card-holder-title{
+    font-family: square721bt;
+    font-weight: 900;
 }

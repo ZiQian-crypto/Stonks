@@ -8,8 +8,8 @@ function Dashboard(){
 
     return(
         <div className='dash-background'>
-            <div>
-                
+            <div className="card-holder">
+                <h1 className="card-holder-title">STONKS</h1>
             </div>
         </div>
     )
