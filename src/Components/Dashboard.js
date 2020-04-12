@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../Providers/UserProvider';
 import MapView from './MapView';
+import Hamburger from './Hamburger';
 import '../Styles/Dashboard.css';
 
 function Dashboard(){
@@ -18,6 +19,9 @@ function Dashboard(){
                 placeholder = "🔎 Search for a product" 
                 className = "card-input"
                 />
+            </div>
+            <div className="hamburger-icon">
+                <Hamburger />
             </div>
         </div>
     )

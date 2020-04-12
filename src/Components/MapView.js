@@ -11,7 +11,7 @@ import LocateControl from './LocateControl';
 export default class MapView extends Component {
     state = {
         lat: 1.29,
-        lng: 103.85,
+        lng: 103.81,
         zoom: 13,
     }
 
