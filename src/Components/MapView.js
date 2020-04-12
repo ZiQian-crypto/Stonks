@@ -8,19 +8,6 @@ import {
 import '../Styles/MapView.css';
 import LocateControl from './LocateControl';
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            var latit = position.coords.latitude;
-            var longit = position.coords.longitude;
-            console.log(latit);
-            console.log(longit);
-        });
-    }
-
-    console.log("this works");
-}
-
 export default class MapView extends Component {
     state = {
         lat: 1.29,
@@ -36,9 +23,7 @@ export default class MapView extends Component {
             strings: {
                 title: 'Enable Location',
             },
-            onActivate: () => {
-                getLocation();
-            }
+            onActivate: () => {}
         }
         const position = [this.state.lat, this.state.lng]
         console.log(this.state.lat);
