@@ -21,6 +21,7 @@ export default class MapView extends Component {
             strings: {
                 title: 'Enable Location'
             },
+            cacheLocation: 'true',
             onActivate: () => {}
         }
         const position = [this.state.lat, this.state.lng]
@@ -28,8 +29,8 @@ export default class MapView extends Component {
         return(
             <Map center={position} zoom={this.state.zoom} className="map">
                 <TileLayer
-                    attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+                    url='https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png'
                 />
                 <Marker position={position}>
                     <Popup>
