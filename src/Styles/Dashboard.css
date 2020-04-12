@@ -2,7 +2,6 @@
 
 .dash-background{
     background-color: black;
-<<<<<<< HEAD
     height: 100vh
 }
 
@@ -11,7 +10,6 @@
     padding: 10px;
     vertical-align: center;
     color: white;
-=======
     height: 100vh;
     display: flex;
     flex-direction: row-reverse;
@@ -33,5 +31,4 @@
     font-size: 3em;
     font-weight: 900;
     color: gray;
->>>>>>> c9ff6dc3b65114b04e8fd337d39d2bb3a505e5d5
 }
