@@ -69,7 +69,11 @@ function Dashboard(){
             }
         }
 
-        setRenderList(newRenderList);
+        if(s === ''){
+            setRenderList([]);
+        } else {
+            setRenderList(newRenderList)
+        }
         console.log(renderList);
     }
 
