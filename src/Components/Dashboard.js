@@ -4,6 +4,7 @@ import { firestore } from '../Firebase';
 import MapView from './MapView';
 import Carousel from './Carousel';
 import '../Styles/Dashboard.css';
+import Logo from '../img/logo.png';
 
 let allData;
 
@@ -47,7 +48,7 @@ function Dashboard(){
                 <MapView />
             </div>
             <div className="card-holder">
-                <h1 className="card-holder-title">STONKS</h1>
+                <img className="card-holder-logo" src={Logo} />
                 <input type = "text"
                 placeholder = "🔎 Search for a product" 
                 className = "card-input"

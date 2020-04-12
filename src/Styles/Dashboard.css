@@ -31,11 +31,10 @@
     z-index: 3;
 }
 
-.card-holder-title{
-    font-family: square721bt;
-    font-size: 3em;
-    font-weight: 1000;
-    color: #c1c1c1;
+.card-holder-logo{
+    margin: 3vh;
+    height: 4vh;
+    padding: 2vh;
 }
 
 .card-input{
