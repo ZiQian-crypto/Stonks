@@ -9,16 +9,47 @@
 
 .card {
     margin: 2vh 4vh 2vh 5vh;
-    padding: 1em;
+    padding: 1em 1.5em;
     height: 15vh;
     width: auto;
     display: flex;
     border-radius: 12px;
     justify-content: left;
-    background-color: #F5F5F5;
+    align-items: center;
+    background-color: rgba(247, 245, 245, 0.979);
+    
+    -webkit-transition: width 0.3s, height 0.3s;
+    transition: width 0.3s, height 0.3s;
 }
 
-.store-address{
+.card:hover, :focus{
+    height: 18vh
+}
+
+.store-title {
+    color: #1E1E1E;
+    font-weight: 1000;
+    font-size: 1.4em;
+}
+
+.store-address {
+    margin-top: 5px;
+    margin-bottom: 5px;
     color: gray;
-    font-size: 0.7em;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.store-image {
+    width: 130px;
+    height: 130px;
+    margin-right: 20px;
+    border-radius: 12px;
+}
+
+.store-response {
+    font-size: 0.9em;
+    color: #336791;
+    font-weight: 900;
+    text-transform: uppercase;
 }
