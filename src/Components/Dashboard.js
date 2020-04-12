@@ -5,7 +5,7 @@ import MapView from './MapView';
 import Carousel from './Carousel';
 import '../Styles/Dashboard.css';
 
-let allData;
+let allData = [];
 
 async function getData() {
     const data = await firestore.collection('stores')
@@ -25,17 +25,27 @@ function Dashboard(){
 
     let [ renderList, setRenderList ] = useState(allData);
 
-    const narrowSearchResults = (s) => {
-       let reg = new RegExp(s);
-       let newRenderList = [];
-       for(let i = 0; i < allData.length; i++){
-           if(reg.test(allData[i]) === true){
-               newRenderList = [...newRenderList, allData[i]];
-           }
-       }
+    const narrowSearchResults = (event) => {
+        let s = event.target.value;
+        let reg = new RegExp(s);
+        let newRenderList = [];
+        for(let i = 0; i < allData.length; i++){
+            let found = false;
+
+            for(let j = 0; j < allData[i].products.length; j++){
+                if(reg.test(allData[i].products[j].name) === true){
+                    found = true;
+                    break;
+                }
+            }
+
+            if(found){
+                newRenderList = [...newRenderList, allData[i]];
+            }
+        }
        
-       setRenderList(newRenderList);
-       console.log(newRenderList);
+        setRenderList(newRenderList);
+        console.log(newRenderList);
     }
 
     useEffect(() => async function func(){getData()});
@@ -51,8 +61,9 @@ function Dashboard(){
                 <input type = "text"
                 placeholder = "🔎 Search for a product" 
                 className = "card-input"
+                onChange={e => narrowSearchResults(e)}
                 />
-                <Carousel resultCount = {10} />
+                <Carousel resultCount = {renderList.length} data={renderList} />
             </div>
         </div>
     )
