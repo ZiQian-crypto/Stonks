@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/Firebase.js
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
@@ -25,5 +24,3 @@ const provider = new firebase.auth.GoogleAuthProvider();
 export const signInWithGoogle = () => {
     auth.signInWithPopup(provider);
 };
-=======
->>>>>>> parent of ccc74b5... Added firebase dependecy + firebase.js modifications:src/Components/Firebase.js
