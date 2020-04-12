@@ -6,7 +6,8 @@
 }
 
 .dash-map {
-    height: 500px;
+    height: 100vw;
+    width: 100vw;
     padding: 10px;
     vertical-align: center;
     color: white;
