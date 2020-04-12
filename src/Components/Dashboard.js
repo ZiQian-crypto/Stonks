@@ -76,7 +76,7 @@ function Dashboard(){
     return (
         <div className='dash-background'>
             <div className='dash-map'>
-                <MapView markers={[[]]} />
+                <MapView markers={renderList} />
             </div>
             <div className="card-holder">
                 <img className="card-holder-logo" src={Logo} />

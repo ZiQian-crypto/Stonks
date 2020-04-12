@@ -55,6 +55,15 @@ export default class MapView extends Component {
                     url='https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
                 />
 
+                {this.props.markers.map( marker => { return (
+                    <Marker position = {[parseFloat(marker.address[0]), parseFloat(marker.address[1])]}>
+                        <Popup>
+                            {marker.location}
+                        </Popup>
+                    </Marker>
+                );
+                })}
+
                 <LocateControl options={locateOptions} startDirectly />
             </Map>
         )
