@@ -2,7 +2,9 @@
 
 .dash-background{
     background-color: black;
-    height: 100vh
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .dash-map {
@@ -32,4 +34,16 @@
     font-size: 3em;
     font-weight: bolder;
     color: #c1c1c1;
+}
+
+.card-input{
+    width: 25vw;
+    height: 6vh;
+    -webkit-box-shadow: 0px 7px 10px -3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 7px 10px -3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 7px 10px -3px rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1em;
 }
