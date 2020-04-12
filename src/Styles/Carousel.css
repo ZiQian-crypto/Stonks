@@ -1,23 +1,17 @@
 .result-container-outer {
     margin-top: 1vh;
     padding: 5px;
-    position: relative;
     width: 100%;
     height: auto;
-    box-sizing: content-box;
-    overflow: hidden;
-}
-
-.result-container-inner {
-    overflow-y: auto;
-    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 .card {
-    margin: 0.8vh;
-    padding: 10px;
-    height: 10vh;
-    width: 300px;
+    margin: 2vh 4vh 2vh 5vh;
+    padding: 1em;
+    height: 15vh;
+    width: auto;
     display: flex;
     border-radius: 12px;
     justify-content: left;

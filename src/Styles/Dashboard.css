@@ -40,7 +40,7 @@
 
 .card-input{
     width: 25vw;
-    height: 5vh;
+    min-height: 5vh;
     border: none;
     border-radius: 12px;
     text-align: center;
