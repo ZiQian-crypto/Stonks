@@ -5,6 +5,8 @@ export default class Carousel extends Component {
 
     render() {
         const { resultCount } = this.props;
+        
+        
         let carousel = []
 
         for (let i = 0; i < resultCount; i++) {
