@@ -58,7 +58,8 @@ export default class MapView extends Component {
                 {this.props.markers.map( marker => { return (
                     <Marker position = {[parseFloat(marker.address[0]), parseFloat(marker.address[1])]}>
                         <Popup>
-                            {marker.location}
+                            <h1>{marker.name}</h1>
+                            <p>{marker.location}</p>
                         </Popup>
                     </Marker>
                 );
