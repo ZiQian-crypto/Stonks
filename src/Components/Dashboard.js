@@ -44,9 +44,6 @@ function comparator(a, b){
     let bLat = b.substring(0,5).parseFloat();
     let bLong = b.substring(10, 17).parseFloat();
 
-
-
-
 }
 
 function Dashboard(){
@@ -63,7 +60,7 @@ function Dashboard(){
             for (let j = 0; j < allData[i].products.length; j++) {
                 if (reg.test(allData[i].products[j].name) === true) {
                     found = true;
-                    break;
+                    allData[i].currentProduct = allData[i].products[j].name;
                 }
             }
 
@@ -87,7 +84,7 @@ function Dashboard(){
             <div className="card-holder">
                 <img className="card-holder-logo" src={Logo} />
                 <input type="text"
-                    placeholder="🔎 Search for a product"
+                    placeholder = "🔎 Search for something!"
                     className="card-input"
                     onChange={e => narrowSearchResults(e)}
                 />

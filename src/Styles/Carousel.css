@@ -17,3 +17,8 @@
     justify-content: left;
     background-color: #F5F5F5;
 }
+
+.store-address{
+    color: gray;
+    font-size: 0.7em;
+}

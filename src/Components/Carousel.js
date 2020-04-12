@@ -15,7 +15,7 @@ export default class Carousel extends Component {
                             <div className="card-inner-right">
                                 {/* store details go here */}
                                 <div className="store-title">{supplier.name}</div>
-                                <div className="store-address"></div>
+                                <div className="store-address">{(supplier.currentProduct === null)? '' : supplier.currentProduct}</div>
                                 <div className="store-response"></div>
                                 <div className="store-distance"></div>
                             </div>
