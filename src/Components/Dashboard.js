@@ -20,7 +20,7 @@ function Dashboard(){
                 placeholder = "🔎 Search for a product" 
                 className = "card-input"
                 />
-                <Carousel resultCount = {4} />
+                <Carousel resultCount = {10} />
             </div>
             <div className="hamburger-icon">
                 <Hamburger />
