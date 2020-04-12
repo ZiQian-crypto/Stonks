@@ -4,10 +4,6 @@
     position: relative;
     width: 100%;
     height: auto;
-<<<<<<< HEAD
-    align-items: center;
-    overflow: auto;
-=======
     box-sizing: content-box;
     overflow: hidden;
 }
@@ -15,7 +11,6 @@
 .result-container-inner {
     overflow-y: auto;
     justify-content: center;
->>>>>>> 076ea6016b2a136928fbe42c6c2915f175223def
 }
 
 .card {

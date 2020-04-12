@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../Providers/UserProvider';
 import { firestore } from '../Firebase';
 import MapView from './MapView';
 import Carousel from './Carousel';
 import '../Styles/Dashboard.css';
 
+let allData;
+
 async function getData() {
-    const data = await firestore.collection('events')
+    const data = await firestore.collection('stores')
     data.get().then((querySnapshot) => {
         const tempDoc = []
         querySnapshot.forEach((doc) => {
@@ -15,12 +17,28 @@ async function getData() {
                 ...doc.data()
             })
         })
-        console.log(tempDoc)
+        allData = tempDoc;
     })
 }
 
 function Dashboard(){
 
+    let [ renderList, setRenderList ] = useState(allData);
+
+    const narrowSearchResults = (s) => {
+       let reg = new RegExp(s);
+       let newRenderList = [];
+       for(let i = 0; i < allData.length; i++){
+           if(reg.test(allData[i]) === true){
+               newRenderList = [...newRenderList, allData[i]];
+           }
+       }
+       
+       setRenderList(newRenderList);
+       console.log(newRenderList);
+    }
+
+    useEffect(() => async function func(){getData()});
     let user = useContext(UserContext);
 
     return(
