@@ -22,49 +22,49 @@ async function getData() {
     })
 }
 
-function Dashboard(){
+function Dashboard() {
 
-    let [ renderList, setRenderList ] = useState(allData);
+    let [renderList, setRenderList] = useState(allData);
 
     const narrowSearchResults = (event) => {
         let s = event.target.value;
         let reg = new RegExp(s);
         let newRenderList = [];
-        for(let i = 0; i < allData.length; i++){
+        for (let i = 0; i < allData.length; i++) {
             let found = false;
 
-            for(let j = 0; j < allData[i].products.length; j++){
-                if(reg.test(allData[i].products[j].name) === true){
+            for (let j = 0; j < allData[i].products.length; j++) {
+                if (reg.test(allData[i].products[j].name) === true) {
                     found = true;
                     break;
                 }
             }
 
-            if(found){
+            if (found) {
                 newRenderList = [...newRenderList, allData[i]];
             }
         }
-       
+
         setRenderList(newRenderList);
         console.log(newRenderList);
     }
 
-    useEffect(() => async function func(){getData()});
+    useEffect(() => async function func() { getData() });
     let user = useContext(UserContext);
 
-    return(
+    return (
         <div className='dash-background'>
             <div className='dash-map'>
                 <MapView />
             </div>
             <div className="card-holder">
                 <img className="card-holder-logo" src={Logo} />
-                <input type = "text"
-                placeholder = "🔎 Search for a product" 
-                className = "card-input"
-                onChange={e => narrowSearchResults(e)}
+                <input type="text"
+                    placeholder="🔎 Search for a product"
+                    className="card-input"
+                    onChange={e => narrowSearchResults(e)}
                 />
-                <Carousel resultCount = {renderList.length} data={renderList} />
+                <Carousel resultCount={renderList.length} data={renderList} />
             </div>
         </div>
     )
