@@ -5,30 +5,23 @@ import '../Styles/Carousel.css';
 export default class Carousel extends Component {
 
     render() {
-        const { resultCount } = this.props;
-
-
-        let carousel = []
-
-        for (let i = 0; i < resultCount; i++) {
-            carousel.push(
-                <div className={"card -" + i}>
-                    <div className="card-inner-left">
-                        {/* store img goes here */}
-                    </div>
-                    <div className="card-inner-right">
-                        {/* store details go here */}
-                        <div className="store-title"></div>
-                        <div className="store-address"></div>
-                        <div className="store-response"></div>
-                        <div className="store-distance"></div>
-                    </div>
-                </div>
-            )
-        }
+        const { resultCount, data } = this.props;
 
         return (
-            <Carousel />
+            <div className="result-container">
+                {data.map((store) => {
+                    return <div className={"card -" + store.id}>
+                        <div className="card-inner-left"></div>
+                        <div className="card-inner-right">
+                            {/* store details go here */}
+                            <div className="store-title">{store.name}</div>
+                            <div className="store-address"></div>
+                            <div className="store-response"></div>
+                            <div className="store-distance"></div>
+                        </div>
+                    </div>
+                })}
+            </div>
         )
     }
 }
