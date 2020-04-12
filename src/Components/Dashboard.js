@@ -14,6 +14,10 @@ function Dashboard(){
             </div>
             <div className="card-holder">
                 <h1 className="card-holder-title">STONKS</h1>
+                <input type = "text"
+                placeholder = "🔎 Search for a product" 
+                className = "card-input"
+                />
             </div>
         </div>
     )
