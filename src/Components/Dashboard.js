@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../Providers/UserProvider';
+import MapView from './MapView';
 import '../Styles/Dashboard.css';
 
 function Dashboard(){
@@ -8,8 +9,8 @@ function Dashboard(){
 
     return(
         <div className='dash-background'>
-            <div>
-                
+            <div className='dash-map'>
+                <MapView />
             </div>
         </div>
     )

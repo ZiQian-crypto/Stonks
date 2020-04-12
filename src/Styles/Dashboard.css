@@ -3,3 +3,10 @@
     background-color: black;
     height: 100vh
 }
+
+.dash-map {
+    height: 500px;
+    padding: 10px;
+    vertical-align: center;
+    color: white;
+}
