@@ -4,6 +4,7 @@ import { firestore } from '../Firebase';
 import MapView from './MapView';
 import Carousel from './Carousel';
 import '../Styles/Dashboard.css';
+import Logo from '../img/logo.png';
 
 let allData = [];
 
@@ -50,47 +51,47 @@ function comparator(a, b){
 
 function Dashboard(){
 
-    let [ renderList, setRenderList ] = useState(allData);
+    let [renderList, setRenderList] = useState(allData);
 
     const narrowSearchResults = (event) => {
         let s = event.target.value;
         let reg = new RegExp(s);
         let newRenderList = [];
-        for(let i = 0; i < allData.length; i++){
+        for (let i = 0; i < allData.length; i++) {
             let found = false;
 
-            for(let j = 0; j < allData[i].products.length; j++){
-                if(reg.test(allData[i].products[j].name) === true){
+            for (let j = 0; j < allData[i].products.length; j++) {
+                if (reg.test(allData[i].products[j].name) === true) {
                     found = true;
                     break;
                 }
             }
 
-            if(found){
+            if (found) {
                 newRenderList = [...newRenderList, allData[i]];
             }
         }
-       
+
         setRenderList(newRenderList);
         console.log(renderList);
     }
 
-    useEffect(() => async function func(){getData()});
+    useEffect(() => async function func() { getData() });
     let user = useContext(UserContext);
 
-    return(
+    return (
         <div className='dash-background'>
             <div className='dash-map'>
                 <MapView />
             </div>
             <div className="card-holder">
-                <h1 className="card-holder-title">STONKS</h1>
-                <input type = "text"
-                placeholder = "🔎 Search for a product" 
-                className = "card-input"
-                onChange={e => narrowSearchResults(e)}
+                <img className="card-holder-logo" src={Logo} />
+                <input type="text"
+                    placeholder="🔎 Search for a product"
+                    className="card-input"
+                    onChange={e => narrowSearchResults(e)}
                 />
-                <Carousel resultCount = {renderList.length} data={renderList} />
+                <Carousel resultCount={renderList.length} data={renderList} />
             </div>
         </div>
     )
