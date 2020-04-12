@@ -6,6 +6,7 @@ import {
     Popup,
 } from 'react-leaflet';
 import '../Styles/MapView.css';
+import LocateControl from './LocateControl';
 
 export default class MapView extends Component {
     state = {
@@ -15,7 +16,15 @@ export default class MapView extends Component {
     }
 
     render() {
+        const locateOptions = {
+            position: 'topleft',
+            strings: {
+                title: 'Enable Location'
+            },
+            onActivate: () => {}
+        }
         const position = [this.state.lat, this.state.lng]
+        
         return(
             <Map center={position} zoom={this.state.zoom} className="map">
                 <TileLayer
@@ -27,6 +36,7 @@ export default class MapView extends Component {
                         A pretty CSS3 popup. <br /> Easily customizable.
                     </Popup>
                 </Marker>
+                <LocateControl options={locateOptions} startDirectly />
             </Map>
         )
     }
