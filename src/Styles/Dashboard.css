@@ -15,9 +15,12 @@
     bottom: 0;
     border-radius: 30px;
     display: flex;
+    justify-content: center;
 }
 
 .card-holder-title{
     font-family: square721bt;
+    font-size: 3em;
     font-weight: 900;
+    color: gray;
 }
