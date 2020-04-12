@@ -39,13 +39,6 @@ async function getData() {
     })
 }
 
-function comparator(a, b){
-    let [ aLat, aLong ] = a;
-    let bLat = b.substring(0,5).parseFloat();
-    let bLong = b.substring(10, 17).parseFloat();
-
-}
-
 function Dashboard(){
 
     let [renderList, setRenderList] = useState(allData);
@@ -83,7 +76,7 @@ function Dashboard(){
     return (
         <div className='dash-background'>
             <div className='dash-map'>
-                <MapView />
+                <MapView markers={[[]]} />
             </div>
             <div className="card-holder">
                 <img className="card-holder-logo" src={Logo} />

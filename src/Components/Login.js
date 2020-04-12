@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import '../Styles/Login.css';
-import { signInWithGoogle } from '../Firebase';
+import { signInWithGoogle, firestore } from '../Firebase';
 import { UserContext } from '../Providers/UserProvider';
 
 function Login(){
