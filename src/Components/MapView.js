@@ -8,24 +8,27 @@ import {
 import '../Styles/MapView.css';
 import LocateControl from './LocateControl';
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            var latit = position.coords.latitude;
-            var longit = position.coords.longitude;
-            console.log(latit);
-            console.log(longit);
-        });
+export default class MapView extends Component {
+    
+    constructor(props){
+        super(props);
+        this.state = {
+            lat: 1.29,
+            lng: 103.81,
+            zoom: 13,
+        }
+
+        this.getLocation = this.getLocation.bind(this);
     }
 
-    console.log("this works");
-}
-
-export default class MapView extends Component {
-    state = {
-        lat: 1.29,
-        lng: 103.81,
-        zoom: 13,
+    getLocation(){
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var latit = position.coords.latitude;
+                var longit = position.coords.longitude;
+                this.setState({lat: latit, lng: longit});
+            });
+        }
     }
 
     render() {
@@ -37,7 +40,7 @@ export default class MapView extends Component {
                 title: 'Enable Location',
             },
             onActivate: () => {
-                getLocation();
+                this.getLocation();
             }
         }
         const position = [this.state.lat, this.state.lng]
@@ -51,11 +54,7 @@ export default class MapView extends Component {
                     attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
                     url='https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
                 />
-                <Marker position={position}>
-                    <Popup>
-                        A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
-                </Marker>
+
                 <LocateControl options={locateOptions} startDirectly />
             </Map>
         )
