@@ -28,11 +28,7 @@ export default class Carousel extends Component {
         }
 
         return (
-            <div className="result-container">
-                <FadeIn>
-                    {carousel}
-                </FadeIn>
-            </div>
+            <Carousel />
         )
     }
 }
