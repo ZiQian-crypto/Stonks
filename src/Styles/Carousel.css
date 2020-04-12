@@ -1,0 +1,8 @@
+.card {
+    padding: 5px;
+    width: auto;
+    height: 15vh;
+    display: flex;
+    justify-content: left;
+    color: #F5F5F5;
+}
