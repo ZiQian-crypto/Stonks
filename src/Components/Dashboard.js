@@ -35,6 +35,12 @@ function Dashboard(){
                 className = "card-input"
                 />
                 <Carousel resultCount = {10} />
+<<<<<<< HEAD
+            </div>
+            <div className="hamburger-icon">
+                <Hamburger />
+=======
+>>>>>>> 076ea6016b2a136928fbe42c6c2915f175223def
             </div>
         </div>
     )
