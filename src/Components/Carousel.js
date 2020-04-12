@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
+import FadeIn from 'react-fade-in';
 import '../Styles/Carousel.css';
 
 export default class Carousel extends Component {
 
     render() {
         const { resultCount } = this.props;
-        
-        
+
+
         let carousel = []
 
         for (let i = 0; i < resultCount; i++) {
             carousel.push(
-                <div className="card">
+                <div className={"card -" + i}>
                     <div className="card-inner-left">
                         {/* store img goes here */}
                     </div>
@@ -27,10 +28,10 @@ export default class Carousel extends Component {
         }
 
         return (
-            <div className="result-container-outer">
-                <div className="result-container-inner">
+            <div className="result-container">
+                <FadeIn>
                     {carousel}
-                </div>
+                </FadeIn>
             </div>
         )
     }
