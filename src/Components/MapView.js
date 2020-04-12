@@ -18,10 +18,11 @@ export default class MapView extends Component {
     render() {
         const locateOptions = {
             position: 'topleft',
+            flyTo: true,
+            cacheLocation: true,
             strings: {
-                title: 'Enable Location'
+                title: 'Enable Location',
             },
-            cacheLocation: 'true',
             onActivate: () => {}
         }
         const position = [this.state.lat, this.state.lng]

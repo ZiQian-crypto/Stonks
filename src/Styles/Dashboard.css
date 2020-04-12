@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap:900');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+*{ 
+    font-family: 'IBM Plex Sans', sans-serif;
+}
 
 .dash-background{
     background-color: black;
@@ -36,20 +41,23 @@
 .card-holder-title{
     font-family: square721bt;
     font-size: 3em;
-    font-weight: bolder;
+    font-weight: 1000;
     color: #c1c1c1;
 }
 
 .card-input{
     width: 25vw;
-    height: 6vh;
-    -webkit-box-shadow: 0px 7px 10px -3px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0px 7px 10px -3px rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 7px 10px -3px rgba(0, 0, 0, 0.4);
+    height: 5vh;
     border: none;
-    border-radius: 20px;
+    border-radius: 12px;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.2em;
+    color: #6a6a6a;
+    font-weight: 500;
+
+    -webkit-box-shadow: 0px 5px 22px -6px rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 0px 5px 22px -6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 5px 22px -6px rgba(0, 0, 0, 0.2);
 }
 
 .hamburger-icon{
