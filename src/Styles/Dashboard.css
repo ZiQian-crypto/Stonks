@@ -10,17 +10,18 @@
 .card-holder{
     background-color: white;
     width: 30vw;
-    height: 90vh;
+    height: 95vh;
     position: absolute;
     bottom: 0;
     border-radius: 30px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-holder-title{
     font-family: square721bt;
     font-size: 3em;
-    font-weight: 900;
-    color: gray;
+    font-weight: bolder;
+    color: #c1c1c1;
 }
