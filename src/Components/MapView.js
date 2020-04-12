@@ -9,8 +9,8 @@ import '../Styles/MapView.css';
 
 export default class MapView extends Component {
     state = {
-        lat: 51.505,
-        lng: -0.09,
+        lat: 1.29,
+        lng: 103.85,
         zoom: 13,
     }
 

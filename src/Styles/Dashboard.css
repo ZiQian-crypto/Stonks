@@ -5,6 +5,7 @@
     height: 100vh;
     display: flex;
     flex-direction: row-reverse;
+    overflow: hidden;
 }
 
 .dash-map {
