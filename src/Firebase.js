@@ -5,6 +5,7 @@ import "firebase/firestore";
 import { functions } from "firebase";
 
 const firebaseConfig = {
+    apiKey: "AIzaSyAdJ7RH-LgjNoXRRIvj2Xg_seorLK4QBss",
     authDomain: "stonks-d9988.firebaseapp.com",
     databaseURL: "https://stonks-d9988.firebaseio.com",
     projectId: "stonks-d9988",
@@ -13,7 +14,6 @@ const firebaseConfig = {
     appId: "1:181721112658:web:5b817e2f7857143c983f8b",
     measurementId: "G-KDKCE860QP"
 };
-
 
 firebase.initializeApp(firebaseConfig);
 
