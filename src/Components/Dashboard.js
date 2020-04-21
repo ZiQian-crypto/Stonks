@@ -44,17 +44,19 @@ function Dashboard(){
     let [renderList, setRenderList] = useState(allData);
 
     const narrowSearchResults = (event) => {
-        let s = event.target.value;
+        let s = event.target.value.toLowerCase();
         let reg = new RegExp(s);
+        let reg2 = new RegExp(s.charAt(0).toUpperCase() + s.slice(1));
         let newRenderList = [];
         for (let i = 0; i < allData.length; i++) {
             let found = false;
 
             for (let j = 0; j < allData[i].products.length; j++) {
-                if (reg.test(allData[i].products[j].name) === true) {
+                if (reg.test(allData[i].products[j].name) === true || reg2.test(allData[i].products[j].name) === true) {
                     found = true;
                     allData[i].currentProduct = allData[i].products[j].name;
                 }
+
             }
 
             if (found) {
