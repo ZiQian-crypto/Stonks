@@ -22,8 +22,8 @@
     transition: width 0.3s, height 0.3s;
 }
 
-.card:hover, :focus{
-    height: 18vh
+.card:hover{
+    height: 18vh;
 }
 
 .store-title {
