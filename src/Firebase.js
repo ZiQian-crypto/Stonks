@@ -2,9 +2,9 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
-import { functions } from "firebase";
 
 const firebaseConfig = {
+    apiKey: 'AIzaSyAdJ7RH-LgjNoXRRIvj2Xg_seorLK4QBss',
     authDomain: "stonks-d9988.firebaseapp.com",
     databaseURL: "https://stonks-d9988.firebaseio.com",
     projectId: "stonks-d9988",
